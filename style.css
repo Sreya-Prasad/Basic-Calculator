@@ -1,0 +1,76 @@
+/* ========== Body Styles ========== */
+/* Minimalist full-page layout with centered calculator */
+body {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  height: 100vh; /* Full viewport height */
+  font-family: 'Segoe UI', sans-serif; /* Clean, modern font */
+  background-color: #e5eff6; /* Soft blue background for a calming look */
+  display: flex; /* Flexbox layout to center content */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+/* ========== Calculator Container ========== */
+/* Main calculator box with rounded corners and shadow */
+#calc {
+  background-color: #1e1e2f; /* Dark background for contrast */
+  border-radius: 16px; /* Rounded corners for smooth UI */
+  padding: 25px; /* Internal spacing */
+  width: 320px; /* Fixed width for compact design */
+  box-shadow: 
+    10px 10px 30px rgba(0, 0, 0, 0.15),   /* Outer dark shadow for depth */
+    -5px -5px 15px rgba(255, 255, 255, 0.7); /* Light top-left shadow for 3D effect */
+  border: 1px solid #e0e0e0; /* Subtle border around calculator */
+  transition: transform 0.2s ease; /* Smooth hover effect */
+}
+
+/* Slight float effect when calculator is hovered */
+#calc:hover {
+  transform: translateY(-4px); /* Moves up slightly */
+}
+
+/* ========== Output Field ========== */
+/* Styles for the result/input display field */
+#output input {
+  width: 100%; /* Take full width of container */
+  height: 60px; /* Adequate height for visibility */
+  font-size: 24px; /* Large text for clarity */
+  text-align: right; /* Align text to the right (like real calculators) */
+  padding-right: 10px; /* Space between text and edge */
+  border-radius: 12px; /* Rounded corners */
+  border: none; /* No border */
+  background: #f7f7f7; /* Light background for input area */
+  box-shadow: 
+    inset 2px 2px 6px #ccc,      /* Inner shadow for depth */
+    inset -2px -2px 6px #fff;    /* Opposite inner highlight */
+  margin-bottom: 20px; /* Space below the display field */
+  outline: none; /* Remove outline on focus */
+}
+
+/* ========== Buttons ========== */
+/* Buttons inside the calculator grid */
+.btn input {
+  width: 60px; /* Uniform button width */
+  height: 50px; /* Uniform height */
+  margin: 6px; /* Spacing between buttons */
+  font-size: 18px; /* Readable font size */
+  border-radius: 10px; /* Rounded buttons */
+  border: none; /* No default border */
+  background: linear-gradient(to bottom, #e0e0e0, #cfcfcf); /* Soft gradient background */
+  color: #333; /* Dark text color for contrast */
+  box-shadow: 
+    4px 4px 10px rgba(0, 0, 0, 0.2), /* Shadow bottom-right */
+    -2px -2px 6px rgba(255, 255, 255, 0.8); /* Highlight top-left */
+  transition: 
+    transform 0.1s ease, 
+    box-shadow 0.1s ease; /* Smooth press animation */
+  cursor: pointer; /* Cursor changes to pointer on hover */
+}
+
+/* ========== Button Press Effect ========== */
+/* Effect when a button is clicked */
+.btn input:active {
+  transform: translateY(2px); /* Button moves down to mimic press */
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2); /* Inset shadow for pressed effect */
+}
