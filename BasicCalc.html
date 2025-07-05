@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <title>Calculator</title>
+   <!-- Link to external CSS file for styling -->
+   <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+   <!-- Calculator container -->
+   <div id="calc">
+
+      <!-- Content wrapper -->
+      <div id="content">
+
+         <!-- Calculator form (not submitted, just used for layout) -->
+         <form onsubmit="return false;">
+
+            <!-- Display screen for showing results -->
+            <div id="output">
+               <!-- Keep this input editable to allow keyboard typing, or make it readonly if input is handled via JS -->
+               <input type="text" id="res" readonly><!-- Display area -->
+            </div>
+
+            <!-- Buttons for calculator operations -->
+            <div class="btn">
+
+               <!-- First row: Clear, Backspace, Modulus, Divide -->
+               <input type="button" value='C' onclick="Clear()" id="clear"> <!-- Clears display -->
+               <input type="button" value='&#11013;' onclick="Back()" id="backspace"> <!-- Backspace (← symbol) -->
+               <input type="button" value='%' onclick="Solve('%')"> <!-- Modulus -->
+               <input type="button" value='/' onclick="Solve('/')"> <!-- Division -->
+               <br>
+
+               <!-- Second row: 7, 8, 9, Multiply -->
+               <input type="button" value='7' onclick="Solve('7')">
+               <input type="button" value='8' onclick="Solve('8')">
+               <input type="button" value='9' onclick="Solve('9')">
+               <input type="button" value='x' onclick="Solve('*')"> <!-- 'x' displayed but uses '*' internally -->
+               <br>
+
+               <!-- Third row: 4, 5, 6, Subtract -->
+               <input type="button" value='4' onclick="Solve('4')">
+               <input type="button" value='5' onclick="Solve('5')">
+               <input type="button" value='6' onclick="Solve('6')">
+               <input type="button" value='-' onclick="Solve('-')"> <!-- Subtraction -->
+               <br>
+
+               <!-- Fourth row: 1, 2, 3, Add -->
+               <input type="button" value='1' onclick="Solve('1')">
+               <input type="button" value='2' onclick="Solve('2')">
+               <input type="button" value='3' onclick="Solve('3')">
+               <input type="button" value='+' onclick="Solve('+')"> <!-- Addition -->
+               <br>
+
+               <!-- Fifth row: Double zero, Zero, Decimal, Equal -->
+               <input type="button" value='00' onclick="Solve('00')"> <!-- Double zero -->
+               <input type="button" value='0' onclick="Solve('0')">
+               <input type="button" value='.' onclick="Solve('.')"> <!-- Decimal point -->
+               <input type="button" value='=' onclick="Result()"> <!-- Evaluate expression -->
+            </div>
+         </form>
+
+      </div> <!-- End of content wrapper -->
+
+   </div> <!-- End of calculator container -->
+
+   <!-- Link to external JavaScript file for calculator functionality -->
+   <script src='index.js'></script>
+
+</body>
+</html>
