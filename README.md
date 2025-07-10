@@ -9,7 +9,7 @@ A simple and interactive web-based calculator developed using HTML, CSS, and Jav
 - Keyboard support for entering numbers and operators
 - Real-time display update
 - User-friendly and responsive UI
-- 
+  
 ## 🛠️ Tech Stack
 
 - **HTML** – Structure
