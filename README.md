@@ -29,7 +29,7 @@ A simple and interactive web-based calculator developed using HTML, CSS, and Jav
    cd Basic-Calculator
    ```
 
-3. Open `BasicCalc.html` in your browser.
+3. Open `index.html` in your browser.
 
 ## 🎮 Usage
 
